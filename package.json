@@ -1,0 +1,19 @@
+{
+  "name": "@kauefraga/json-server",
+  "version": "1.0.0",
+  "main": "dist/server/server.js",
+  "bin": "dist/cli/bin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "json-server",
+    "json",
+    "server",
+    "api-rest",
+    "api",
+    "@kauefraga/json-server"
+  ],
+  "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
+  "license": "MIT"
+}
