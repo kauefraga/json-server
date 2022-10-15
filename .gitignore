@@ -2,7 +2,7 @@
 node_modules
 
 # Typescript Compiler Output
-dist
+bin
 
 # Test Data
 mock
