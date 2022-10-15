@@ -1,6 +1,6 @@
 {
   "name": "quicky-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "☂ A fast json server with no dependencies inspired in json-server",
   "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
   "license": "MIT",
