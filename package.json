@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": "https://github.com/kauefraga/quicky-server.git",
   "publishConfig": {
-    "registry":"https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "json-server",
