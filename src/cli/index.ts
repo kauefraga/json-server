@@ -1,4 +1,6 @@
+import { clear } from 'node:console';
 import { resolve } from 'path';
+import { log } from '../lib/colorized-console';
 import { readJson } from '../lib/parse-json';
 import { createApp } from '../http/server';
 
@@ -8,11 +10,26 @@ interface MainProps {
 }
 
 export async function main({ port, jsonPath }: MainProps) {
-  const db = await readJson(resolve(jsonPath));
+  clear();
+
+  log.blue('\n  \\{^_^}/ hi!');
+
+  const data = await readJson(resolve(jsonPath));
+
+  log.dim(`\n  Loading ${jsonPath}\n  Done`);
 
   const server = createApp((req, res) => {
+    log.green(`${res.req.method} - ${res.req.url} - ${new Date()}`);
+
     if (req.method !== 'GET') {
-      return res.end();
+      res.writeHead(405, {
+        'Content-Type': 'application/json',
+      });
+
+      return res.end(JSON.stringify({
+        success: false,
+        error: 'You must request with GET method',
+      }));
     }
 
     res.writeHead(200, {
@@ -21,11 +38,11 @@ export async function main({ port, jsonPath }: MainProps) {
 
     return res.end(JSON.stringify({
       success: true,
-      data: db,
+      data,
     }));
   });
 
   server.listen(port, () => {
-    console.log(`[server] listening on http://localhost:${port}`);
+    log.white(`\n  Resources\n  http://localhost:${port}\n`);
   });
 }
