@@ -3,3 +3,6 @@ node_modules
 
 # Typescript Compiler Output
 dist
+
+# Test Data
+mock
