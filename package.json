@@ -1,21 +1,21 @@
 {
-  "name": "@kauefraga/json-server",
+  "name": "quicky-server",
   "version": "1.0.0",
   "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
   "license": "MIT",
   "repository": {
-    "url": "git+https://github.com/kauefraga/json-server.git"
+    "url": "git+https://github.com/kauefraga/quicky-server.git"
   },
   "keywords": [
     "json-server",
     "api-rest"
   ],
-  "main": "dist/server/server.js",
-  "bin": "dist/cli/bin.js",
+  "main": "dist/src/cli/bin.js",
+  "bin": "dist/src/cli/bin.js",
   "scripts": {
     "build": "tsc",
     "start": "node .",
-    "dev": "tsnd --respawn --transpile-only src/server/server.ts",
+    "dev": "tsnd --respawn --transpile-only src/cli/bin.ts",
     "lint": "eslint"
   },
   "devDependencies": {
