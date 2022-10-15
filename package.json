@@ -4,8 +4,9 @@
   "description": "☂ A fast json server with no dependencies inspired in json-server",
   "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
   "license": "MIT",
-  "repository": {
-    "url": "git+https://github.com/kauefraga/quicky-server.git"
+  "repository": "https://github.com/kauefraga/quicky-server.git",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
   },
   "keywords": [
     "json-server",
