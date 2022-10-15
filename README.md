@@ -29,18 +29,16 @@
 git clone https://github.com/kauefraga/quicky-server.git
 cd quicky-server
 npm install
-npm dev
+npm dev <port> <mock/path>
 ```
 
-Or downloading with yarn? `yarn && yarn dev`
+Or downloading with yarn? `yarn && yarn dev <port> <mock/path>`
 <br/>
-Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev`
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <mock/path>`
 
 ## 💻 Technologies
 
-- 🌐 [node:http](https://nodejs.org/dist/latest-v16.x/docs/api/http.html) - Is the native http implementation
+- 🌐 [Node HTTP](https://nodejs.org/dist/latest-v16.x/docs/api/http.html) - The native http implementation of NodeJS
 <!-- - 🎨 [Chalk](https://www.npmjs.com/package/chalk) -->
 - 🧑‍💻 [Typescript](https://www.typescriptlang.org) - Improve dev experience by adding type safety
 
