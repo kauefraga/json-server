@@ -42,6 +42,19 @@ Or downloading with yarn? `yarn && yarn dev <port> <mock/path>`
 <br/>
 Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <mock/path>`
 
+## ✨ Features
+
+- **Fancy UI**: A minimal UI that exposes everything you need
+- **Colorized Outputs**: Everything looks better with some colors
+- **Tiny size**: This package is built with native libraries
+
+## 📑 To do
+
+- [ ] Watch .json changes
+- [ ] Create a easily understandable --help section
+- [ ] Write down in .json (POST requests)
+- [ ] Log changes with own logger (based in [Winston](https://www.npmjs.com/package/winston))
+
 ## 💻 Technologies
 
 - [NodeJS](https://nodejs.org) - A runtime based on V8 JavaScript
