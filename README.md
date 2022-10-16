@@ -23,7 +23,14 @@
 
 <h4 align="center">☂ A fast json server with no dependencies inspired in json-server ☂</h4>
 
-## ⬇️ How to start developing server
+## ⬇️ How to install and use it
+
+```bash
+npm install -g quicky-server
+quicky-server <port> <mock/path>
+```
+
+## ⬇️ How to develop and contribute
 
 ```bash
 git clone https://github.com/kauefraga/quicky-server.git
@@ -31,15 +38,19 @@ cd quicky-server
 npm install
 npm dev <port> <mock/path>
 ```
-
 Or downloading with yarn? `yarn && yarn dev <port> <mock/path>`
 <br/>
 Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <mock/path>`
 
 ## 💻 Technologies
 
-- 🌐 [Node HTTP](https://nodejs.org/dist/latest-v16.x/docs/api/http.html) - The native http implementation of NodeJS
-<!-- - 🎨 [Chalk](https://www.npmjs.com/package/chalk) -->
+- [NodeJS](https://nodejs.org) - A runtime based on V8 JavaScript
+  - 🌐 [HTTP](https://nodejs.org/api/http.html) - The native http
+  - 🗃 [FS](https://nodejs.org/api/fs.html) - The file system
+  - 🗺 [Path](https://nodejs.org/api/path.html) - A way to manipulate paths much easier (cross platform)
+- 💄 Code styling with [Eslint](https://eslint.org)
+  - https://www.npmjs.com/package/eslint-config-airbnb-base
+  - https://www.npmjs.com/package/eslint-config-airbnb-typescript
 - 🧑‍💻 [Typescript](https://www.typescriptlang.org) - Improve dev experience by adding type safety
 
 ## 🗃 Project tree view
