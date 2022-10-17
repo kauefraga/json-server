@@ -28,6 +28,10 @@
 ```bash
 npm install -g quicky-server
 quicky-server <port> <mock/path>
+
+# Or
+
+npx quicky-server <port> <mock/path>
 ```
 
 ## ⬇️ How to develop and contribute
@@ -50,7 +54,7 @@ Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <mock/path>`
 
 ## 📑 To do
 
-- [ ] Watch .json changes
+- [ ] Watch .json changes (here we'll need [Chokidar](https://www.npmjs.com/package/chokidar))
 - [ ] Create a easily understandable --help section
 - [ ] Write down in .json (POST requests)
 - [ ] Log changes with own logger (based in [Winston](https://www.npmjs.com/package/winston))
