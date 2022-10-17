@@ -5,6 +5,8 @@ import { log } from '../lib/colorized-console';
 function notFound(_: RequestOptions, res: ServerResponse) {
   res.statusCode = 404;
 
+  log.warn(`${res.req.method} ${res.req.url} ${res.statusCode} - ${new Date()}`);
+
   return res.end(JSON.stringify({
     error: 'Resource not found',
   }));
