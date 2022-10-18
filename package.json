@@ -1,7 +1,7 @@
 {
   "name": "quicky-server",
   "version": "1.0.4",
-  "description": "☂ A fast json server with no dependencies inspired in json-server",
+  "description": "☂️ A fast json server built with native libraries as well as possible. Inspired in json-server.",
   "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/kauefraga/quicky-server.git",
@@ -17,7 +17,9 @@
     "@kauefraga/quicky-server": "bin/cli/bin.js",
     "quicky-server": "bin/cli/bin.js"
   },
-  "files": [ "bin/" ],
+  "files": [
+    "bin/"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "node .",
