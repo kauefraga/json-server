@@ -21,7 +21,13 @@
   />
 </p>
 
-<h4 align="center">☂ A fast json server with no dependencies inspired in json-server ☂</h4>
+<h4 align="center">☂ A fast json server built with native libraries as well as possible. Inspired in json-server.  ☂</h4>
+
+## ✨ Features
+
+- **Fancy UI**: A minimal UI that exposes everything you need
+- **Colorized Outputs**: Everything looks better with some colors
+- **Tiny size**: This package is built with native libraries
 
 ## ⬇️ How to install and use it
 
@@ -46,19 +52,6 @@ Or downloading with yarn? `yarn && yarn dev <port> <mock/path>`
 <br/>
 Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <mock/path>`
 
-## ✨ Features
-
-- **Fancy UI**: A minimal UI that exposes everything you need
-- **Colorized Outputs**: Everything looks better with some colors
-- **Tiny size**: This package is built with native libraries
-
-## 📑 To do
-
-- [ ] Watch .json changes (here we'll need [Chokidar](https://www.npmjs.com/package/chokidar))
-- [ ] Create a easily understandable --help section
-- [ ] Write down in .json (POST requests)
-- [ ] Log changes with own logger (based in [Winston](https://www.npmjs.com/package/winston))
-
 ## 💻 Technologies
 
 - [NodeJS](https://nodejs.org) - A runtime based on V8 JavaScript
@@ -70,16 +63,12 @@ Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <mock/path>`
   - https://www.npmjs.com/package/eslint-config-airbnb-typescript
 - 🧑‍💻 [Typescript](https://www.typescriptlang.org) - Improve dev experience by adding type safety
 
-## 🗃 Project tree view
+## 📑 To do
 
-```bash
-.
-├─ src
-│  ├─ cli
-│  ├─ http
-│  ├─ lib
-└─ tsconfig.json
-```
+- [ ] Watch .json changes (here we'll need [Chokidar](https://www.npmjs.com/package/chokidar))
+- [ ] Create a easily understandable --help section
+- [ ] Write down in .json (POST requests)
+- [ ] Log changes with own logger (based in [Winston](https://www.npmjs.com/package/winston))
 
 ## 📝 License
 
