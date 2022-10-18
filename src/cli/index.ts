@@ -1,16 +1,15 @@
 import { clear } from 'console';
 import { resolve, basename } from 'path';
-import { parseArgs } from '../lib/parse-args';
 import { log } from '../lib/colorized-console';
 import { readJson } from '../lib/parse-json';
 import { jsonServer } from '../http/server';
 
 export async function main(args: string[]) {
-  const [port, jsonPath] = parseArgs(args);
-
   clear();
 
   log.blue('\n  \\{^_^}/ hi!');
+
+  const [port, jsonPath] = args;
 
   const data = await readJson(resolve(jsonPath));
 
@@ -18,7 +17,7 @@ export async function main(args: string[]) {
 
   log.dim(`\n  Loading ${jsonPath}\n  Done`);
 
-  const server = jsonServer(path, (req, res) => {
+  const server = jsonServer(path, (_, res) => {
     log.green(`${res.req.method} ${res.req.url} ${res.statusCode} - ${new Date()}`);
 
     return res.end(JSON.stringify(data));
