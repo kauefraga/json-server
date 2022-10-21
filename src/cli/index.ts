@@ -13,17 +13,17 @@ export async function main(args: string[]) {
 
   const data = await readJson(resolve(jsonPath));
 
-  const path = basename(jsonPath, '.json');
+  const resource = basename(jsonPath, '.json');
 
   log.dim(`\n  Loading ${jsonPath}\n  Done`);
 
-  const server = jsonServer(path, (_, res) => {
+  const server = jsonServer(resource, (_, res) => {
     log.green(`${res.req.method} ${res.req.url} ${res.statusCode} - ${new Date()}`);
 
     return res.end(JSON.stringify(data));
   });
 
   server.listen(port, () => {
-    log.white(`\n  Resources\n  http://localhost:${port}/${path}\n`);
+    log.white(`\n  Resources\n  http://localhost:${port}/${resource}\n`);
   });
 }

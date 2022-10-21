@@ -1,4 +1,3 @@
-/* eslint-disable class-methods-use-this */
 import { RequestOptions, Server, ServerResponse } from 'http';
 import { log } from '../lib/colorized-console';
 
