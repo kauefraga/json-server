@@ -1,0 +1,42 @@
+[
+  {
+    "id": 434795,
+    "name": "Massa Para Pizza QUALITÁ Pacote 300g",
+    "price": 7.39,
+    "img": "https://hatatori.github.io/market/imgs/23549902.png",
+    "brand": "Qualitá",
+    "category": "alimentos"
+  },
+  {
+    "id": 434818,
+    "name": "Massa Para Pastel De Rolo QUALITÁ Pacote 350g",
+    "price": 6.39,
+    "img": "https://hatatori.github.io/market/imgs/23549912.png",
+    "brand": "Qualitá",
+    "category": "alimentos"
+  },
+  {
+    "id": 403287,
+    "name": "Biscoito PASSATEMPO Recheado Doce de Leite 130g",
+    "price": 3.19,
+    "img": "https://hatatori.github.io/market/imgs/21225148.jpg",
+    "brand": "Passatempo",
+    "category": "alimentos"
+  },
+  {
+    "id": 420352,
+    "name": "Carne Seca Bovina Traseiro Jerk Beef QUALITÁ 400g",
+    "price": 22.99,
+    "img": "https://hatatori.github.io/market/imgs/23506248.png",
+    "brand": "Qualitá",
+    "category": "alimentos"
+  },
+  {
+    "id": 429613,
+    "name": "Pipoca Microondas Natural Zero Sódio 90g",
+    "price": 4.19,
+    "img": "https://hatatori.github.io/market/imgs/609276.png",
+    "brand": "Yoki",
+    "category": "alimentos"
+  }
+]
