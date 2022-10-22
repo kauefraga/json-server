@@ -28,16 +28,20 @@
 - **Fancy UI**: A minimal UI that exposes everything you need
 - **Colorized Outputs**: Everything looks better with some colors
 - **Tiny size**: This package is built with native libraries
+- **No config**: You can give it a .json from the web (like [this](https://raw.githubusercontent.com/kauefraga/quicky-server/main/src/mock/example.json))
 
 ## ⬇️ How to install and use it
 
 ```bash
 npm install -g quicky-server
-quicky-server <port> <mock/path>
+quicky-server <port> <path || url>
 
 # Or
 
-npx quicky-server <port> <mock/path>
+npx quicky-server <port> <path || url>
+
+# Example
+npx quicky-server 8080 https://raw.githubusercontent.com/kauefraga/quicky-server/main/src/mock/example.json
 ```
 
 ## ⬇️ How to develop and contribute
@@ -46,11 +50,11 @@ npx quicky-server <port> <mock/path>
 git clone https://github.com/kauefraga/quicky-server.git
 cd quicky-server
 npm install
-npm dev <port> <mock/path>
+npm dev <port> <path || url>
 ```
-Or downloading with yarn? `yarn && yarn dev <port> <mock/path>`
+Or downloading with yarn? `yarn && yarn dev <port> <path || url>`
 <br/>
-Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <mock/path>`
+Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <path || url>`
 
 ## 💻 Technologies
 
@@ -58,17 +62,16 @@ Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <mock/path>`
   - 🌐 [HTTP](https://nodejs.org/api/http.html) - The native http
   - 🗃 [FS](https://nodejs.org/api/fs.html) - The file system
   - 🗺 [Path](https://nodejs.org/api/path.html) - A way to manipulate paths much easier (cross platform)
+- 📡 [Axios](https://npm.im/axios) - Axios is a fully featured http client for doing requests
 - 💄 Code styling with [Eslint](https://eslint.org)
   - https://www.npmjs.com/package/eslint-config-airbnb-base
   - https://www.npmjs.com/package/eslint-config-airbnb-typescript
-- 🧑‍💻 [Typescript](https://www.typescriptlang.org) - Improve dev experience by adding type safety
+- 👩‍💻 [Typescript](https://www.typescriptlang.org) - Improve dev experience by adding type safety
 
 ## 📑 To do
 
 - [ ] Watch .json changes (here we'll need [Chokidar](https://www.npmjs.com/package/chokidar))
 - [ ] Create a easily understandable --help section
-- [ ] Write down in .json (POST requests)
-- [ ] Log changes with own logger (based in [Winston](https://www.npmjs.com/package/winston))
 
 ## 📝 License
 
