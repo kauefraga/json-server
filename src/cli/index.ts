@@ -4,7 +4,7 @@ import { log } from '../lib/colorized-console';
 import { readJson } from '../lib/parse-json';
 import { useFetch } from '../lib/use-fetch';
 import { jsonServer } from '../http/server';
-import { isUrl } from '../lib/isUrl';
+import { isUrl } from '../lib/is-url';
 
 export async function main(args: string[]) {
   clear();
