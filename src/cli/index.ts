@@ -4,6 +4,7 @@ import { log } from '../lib/colorized-console';
 import { readJson } from '../lib/parse-json';
 import { useFetch } from '../lib/use-fetch';
 import { jsonServer } from '../http/server';
+import { isUrl } from '../lib/isUrl';
 
 export async function main(args: string[]) {
   clear();
@@ -12,20 +13,12 @@ export async function main(args: string[]) {
 
   const [port, json] = args;
 
-  let data = {};
+  const data = {};
 
-  // source: https://urlregex.com
-  // eslint-disable-next-line no-useless-escape
-  const urlRegEx = /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/g;
-
-  if (urlRegEx.test(json)) {
-    try {
-      data = await useFetch(json);
-    } catch (e: any) {
-      log.red(e);
-    }
+  if (isUrl(json)) {
+    Object.assign(data, await useFetch(json));
   } else {
-    data = await readJson(resolve(json));
+    Object.assign(data, await readJson(resolve(json)));
   }
 
   const resource = basename(json, '.json');
