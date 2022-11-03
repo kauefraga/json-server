@@ -62,7 +62,6 @@ Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <path || url>`
   - 🌐 [HTTP](https://nodejs.org/api/http.html) - The native http
   - 🗃 [FS](https://nodejs.org/api/fs.html) - The file system
   - 🗺 [Path](https://nodejs.org/api/path.html) - A way to manipulate paths much easier (cross platform)
-- 📡 [Axios](https://npm.im/axios) - Axios is a fully featured http client for doing requests
 - 💄 Code styling with [Eslint](https://eslint.org)
   - https://www.npmjs.com/package/eslint-config-airbnb-base
   - https://www.npmjs.com/package/eslint-config-airbnb-typescript
