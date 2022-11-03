@@ -1,8 +1,23 @@
-import axios from 'axios';
+import http, { IncomingMessage } from 'http';
+import https from 'https';
+import { isHttps } from './is-https';
 
 export async function useFetch(url: string) {
-  const data = await axios.get(url)
-    .then((res) => res.data);
+  const client = isHttps(url)
+    ? https
+    : http;
 
-  return data;
+  return new Promise((resolve, reject) => {
+    client.get(url, (response: IncomingMessage) => {
+      let data = '';
+
+      response.on('data', (chunk) => { data += chunk; });
+
+      response.on('end', () => {
+        resolve(JSON.parse(data));
+      });
+    }).on('error', (e) => {
+      reject(e);
+    });
+  });
 }
