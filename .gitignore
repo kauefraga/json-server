@@ -3,6 +3,3 @@ node_modules
 
 # Typescript Compiler Output
 bin
-
-# Test Data
-mock
