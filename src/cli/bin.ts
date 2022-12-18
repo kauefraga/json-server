@@ -2,7 +2,7 @@
 import { main } from '.';
 
 try {
-  main(process.argv.slice(2));
+  main();
 } catch (e: any) {
   console.error(
     new Error(`${e.code} - ${e.message}`),

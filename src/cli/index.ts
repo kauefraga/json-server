@@ -5,13 +5,14 @@ import { readJson } from '../lib/parse-json';
 import { useFetch } from '../lib/use-fetch';
 import { jsonServer } from '../http/server';
 import { isUrl } from '../lib/is-url';
+import { args } from './args';
 
-export async function main(args: string[]) {
+export async function main() {
   clear();
 
   blue('\n  \\{^_^}/ hi!'); // blue
 
-  const [port, json] = args;
+  const { json, port } = args();
 
   const data = {};
 
