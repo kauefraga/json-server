@@ -21,27 +21,27 @@
   />
 </p>
 
-<h4 align="center">☂ A fast json server built with native libraries as well as possible. Inspired in json-server.  ☂</h4>
+<h4 align="center">☂ A fast json server built with some native libraries and with some mocks. Inspired in json-server.  ☂</h4>
 
 ## ✨ Features
 
 - **Fancy UI**: A minimal UI that exposes everything you need
 - **Colorized Outputs**: Everything looks better with some colors
-- **Tiny size**: This package is built with native libraries
+- **Nice help**: If you need some help, just use `quicky-server -h`
 - **No config**: You can give it a .json from the web (like [this](https://raw.githubusercontent.com/kauefraga/quicky-server/main/src/mock/example.json))
 
 ## ⬇️ How to install and use it
 
 ```bash
 npm install -g quicky-server
-quicky-server <port> <path || url>
+quicky-server --port <port> --json <path || url>
 
 # Or
 
-npx quicky-server <port> <path || url>
+npx quicky-server -p <port> -j <path || url>
 
 # Example
-npx quicky-server 8080 https://raw.githubusercontent.com/kauefraga/quicky-server/main/src/mock/example.json
+npx quicky-server -p 8080 -j https://raw.githubusercontent.com/kauefraga/quicky-server/main/src/mock/example.json
 ```
 
 ## ⬇️ How to develop and contribute
@@ -50,7 +50,7 @@ npx quicky-server 8080 https://raw.githubusercontent.com/kauefraga/quicky-server
 git clone https://github.com/kauefraga/quicky-server.git
 cd quicky-server
 npm install
-npm dev <port> <path || url>
+npm run dev -p <port> -j <path || url>
 ```
 Or downloading with yarn? `yarn && yarn dev <port> <path || url>`
 <br/>
@@ -62,15 +62,16 @@ Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <path || url>`
   - 🌐 [HTTP](https://nodejs.org/api/http.html) - The native http
   - 🗃 [FS](https://nodejs.org/api/fs.html) - The file system
   - 🗺 [Path](https://nodejs.org/api/path.html) - A way to manipulate paths much easier (cross platform)
+- 🔮 [Express](https://expressjs.com) - "Fast, minimalist web framework for Nodejs..."
 - 💄 Code styling with [Eslint](https://eslint.org)
   - https://www.npmjs.com/package/eslint-config-airbnb-base
   - https://www.npmjs.com/package/eslint-config-airbnb-typescript
-- 👩‍💻 [Typescript](https://www.typescriptlang.org) - Improve dev experience by adding type safety
+- ⚗️ [Vitest](https://vitest.dev) - Test runner that implements Jest but with its own ESbuider (out of box typescript, esmodules...)
+- 👩‍💻 [Typescript](https://typescriptlang.org) + [TS-Node-Dev](https://npm.im/ts-node-dev) - Improve dev experience by adding type safety
 
 ## 📑 To do
 
 - [ ] Watch .json changes (here we'll need [Chokidar](https://www.npmjs.com/package/chokidar))
-- [ ] Create a easily understandable --help section
 
 ## 📝 License
 
