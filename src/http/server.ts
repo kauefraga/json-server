@@ -1,24 +1,27 @@
 import express from 'express';
 import { white } from '../lib/colorized-console';
 import { NotFound } from './middlewares/404';
+import { cors } from './middlewares/cors';
 import { logger } from './middlewares/logger';
 
 type Route = `/${string}`;
 
-export interface JsonServerOptions<Data> {
+export interface JsonServerOptions {
   port: string | number;
-  routes: Route[] | Route;
-  data: Data;
+  routes: Route | Route[];
+  data: any;
 }
 
-export function jsonServer<Data = any>({
+export function jsonServer({
   port,
   routes,
   data,
-}: JsonServerOptions<Data>) {
+}: JsonServerOptions) {
   const server = express();
 
   server.disable('x-powered-by'); // don't expose that this application use express
+
+  server.use(cors);
 
   server.get(['/', ...routes], logger, (_, res) => res.json(data));
 
