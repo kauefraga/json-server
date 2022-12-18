@@ -1,7 +1,7 @@
 {
   "name": "quicky-server",
-  "version": "1.1.1",
-  "description": "☂️ A fast json server built with native libraries as well as possible. Inspired in json-server.",
+  "version": "2.0.0",
+  "description": "☂ A fast json server built with some native libraries and with some mocks. Inspired in json-server.",
   "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/kauefraga/quicky-server.git",
@@ -44,6 +44,7 @@
     "vitest": "^0.24.3"
   },
   "dependencies": {
+    "commander": "^9.4.1",
     "express": "^4.18.2"
   }
 }
