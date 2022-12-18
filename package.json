@@ -15,11 +15,11 @@
     "server",
     "backend-server"
   ],
-  "main": "bin/cli/bin.js",
+  "main": "bin/src/cli/bin.js",
   "bin": {
-    "@kauefraga/quicky-server": "bin/cli/bin.js",
-    "quicky-server": "bin/cli/bin.js",
-    "qs": "bin/cli/bin.js"
+    "@kauefraga/quicky-server": "bin/src/cli/bin.js",
+    "quicky-server": "bin/src/cli/bin.js",
+    "qs": "bin/src/cli/bin.js"
   },
   "files": [
     "bin/"
