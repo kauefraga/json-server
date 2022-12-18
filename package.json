@@ -13,7 +13,12 @@
     "api-rest",
     "json",
     "server",
-    "backend-server"
+    "backend-server",
+    "nodejs",
+    "api",
+    "backend",
+    "frontend",
+    "helper-tool"
   ],
   "main": "bin/src/cli/bin.js",
   "bin": {
