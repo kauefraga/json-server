@@ -1,6 +1,7 @@
 import express from 'express';
 import { white } from '../lib/colorized-console';
 import { NotFound } from './middlewares/404';
+import { logger } from './middlewares/logger';
 
 type Route = `/${string}`;
 
@@ -19,13 +20,13 @@ export function jsonServer<Data = any>({
 
   server.disable('x-powered-by'); // don't expose that this application use express
 
-  server.get(['/', ...routes], (_, res) => res.json(data));
+  server.get(['/', ...routes], logger, (_, res) => res.json(data));
 
   server.use(NotFound);
 
   server.listen(port, () => {
     white('\n  Resources');
     white(`  http://localhost:${port}/`);
-    white(`  http://localhost:${port}${routes}`);
+    white(`  http://localhost:${port}${routes}\n`);
   });
 }
