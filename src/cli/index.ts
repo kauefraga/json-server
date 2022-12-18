@@ -8,11 +8,11 @@ import { isUrl } from '../lib/is-url';
 import { args } from './args';
 
 export async function main() {
+  const { json, port } = args();
+
   clear();
 
   blue('\n  \\{^_^}/ hi!'); // blue
-
-  const { json, port } = args();
 
   const data = {};
 
