@@ -1,16 +1,31 @@
-import {
-  createServer, RequestOptions, ServerResponse,
-} from 'http';
-import { Router } from './router';
+import express from 'express';
+import { white } from '../lib/colorized-console';
+import { NotFound } from './middlewares/404';
 
-type Listener = (request: RequestOptions, response: ServerResponse) => void;
+type Route = `/${string}`;
 
-export function jsonServer(path: string, listener: Listener) {
-  const server = createServer();
+export interface JsonServerOptions<Data> {
+  port: string | number;
+  routes: Route[] | Route;
+  data: Data;
+}
 
-  const router = new Router(server);
+export function jsonServer<Data = any>({
+  port,
+  routes,
+  data,
+}: JsonServerOptions<Data>) {
+  const server = express();
 
-  router.get(path, listener);
+  server.disable('x-powered-by'); // don't expose that this application use express
 
-  return server;
+  server.get(['/', ...routes], (_, res) => res.json(data));
+
+  server.use(NotFound);
+
+  server.listen(port, () => {
+    white('\n  Resources');
+    white(`  http://localhost:${port}/`);
+    white(`  http://localhost:${port}${routes}`);
+  });
 }

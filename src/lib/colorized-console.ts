@@ -12,6 +12,18 @@ enum Colors {
 
 type Message = TemplateStringsArray | string;
 
+export function blue(message: Message) {
+  console.log(`${Colors.BLUE}${message}${Colors.RESET}`);
+}
+
+export function white(message: Message) {
+  console.log(`${Colors.WHITE}${message}${Colors.RESET}`);
+}
+
+export function dim(message: Message) {
+  console.log(`${Colors.DIM}${message}${Colors.RESET}`);
+}
+
 export function warn(message: Message) {
   console.warn(`${Colors.YELLOW}${message}${Colors.RESET}`);
 }
