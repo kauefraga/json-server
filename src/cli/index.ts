@@ -1,5 +1,5 @@
 import { clear } from 'console';
-import { resolve, basename } from 'path';
+import { basename } from 'path';
 import { blue, dim } from '../lib/colorized-console';
 import { readJson } from '../lib/parse-json';
 import { useFetch } from '../lib/use-fetch';
@@ -14,13 +14,9 @@ export async function main() {
 
   blue('\n  \\{^_^}/ hi!'); // blue
 
-  const data = {};
-
-  if (isUrl(json)) {
-    Object.assign(data, await useFetch(json));
-  } else {
-    Object.assign(data, await readJson(resolve(json)));
-  }
+  const data = isUrl(json)
+    ? await useFetch(json)
+    : await readJson(json);
 
   dim(`\n  Loading ${json}\n  Done`);
 
