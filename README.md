@@ -1,4 +1,4 @@
-<h1 align="center">Quicky Server</h1>
+<h1 align="center"><code>Quicky Server</code></h1>
 
 <p align="center">
   <img
@@ -28,7 +28,8 @@
 - **Fancy UI**: A minimal UI that exposes everything you need
 - **Colorized Outputs**: Everything looks better with some colors
 - **Nice help**: If you need some help, just use `quicky-server -h`
-- **No config**: You can give it a .json from the web (like [this](https://raw.githubusercontent.com/kauefraga/quicky-server/main/src/mock/example.json))
+- **No config**: You can give it a .json from the web (like [this](https://raw.githubusercontent.com/kauefraga/quicky-server/main/mock/users.json))
+- **Configured CORS**: Connect it with all your applications
 
 ## ⬇️ How to install and use it
 
@@ -41,7 +42,7 @@ quicky-server --port <port> --json <path || url>
 npx quicky-server -p <port> -j <path || url>
 
 # Example
-npx quicky-server -p 8080 -j https://raw.githubusercontent.com/kauefraga/quicky-server/main/src/mock/example.json
+npx quicky-server -p 8080 -j https://raw.githubusercontent.com/kauefraga/quicky-server/main/mock/users.json
 ```
 
 ## ⬇️ How to develop and contribute
