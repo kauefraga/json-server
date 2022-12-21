@@ -1,6 +1,6 @@
 import http, { IncomingMessage } from 'http';
 import https from 'https';
-import { isHttps } from './is-https';
+import { isHttps } from './validators';
 
 export async function useFetch(url: string) {
   const client = isHttps(url)

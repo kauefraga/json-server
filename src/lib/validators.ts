@@ -9,3 +9,14 @@ export function isUrl(url: string) {
 
   return false;
 }
+
+// Verify if the url is secure
+export function isHttps(url: string) {
+  const { protocol } = new URL(url);
+
+  if (protocol === 'https:') {
+    return true;
+  }
+
+  return false;
+}

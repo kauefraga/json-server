@@ -4,7 +4,7 @@ import { blue, dim } from '../lib/colorized-console';
 import { readJson } from '../lib/parse-json';
 import { useFetch } from '../lib/use-fetch';
 import { jsonServer } from '../http/server';
-import { isUrl } from '../lib/is-url';
+import { isUrl } from '../lib/validators';
 import { args } from './args';
 
 export async function main() {
