@@ -1,27 +1,31 @@
-<h1 align="center"><code>Quicky Server</code></h1>
+<div align="center">
+  <h1><code>Quicky Server</code></h1>
 
-<p align="center">
-  <img
-    alt="GitHub top language"
-    src="https://img.shields.io/github/languages/top/kauefraga/quicky-server.svg"
-  />
-  <img
-    alt="Repository size"
-    src="https://img.shields.io/github/repo-size/kauefraga/quicky-server.svg"
-  />
-  <a href="https://github.com/kauefraga/quicky-server/commits/main">
+  <p>
+    <strong>☂ A fast json server built with some native libraries and with some mocks. Inspired in json-server.  ☂</strong>
+  </p>
+
+  <p>
     <img
-      alt="GitHub last commit"
-      src="https://img.shields.io/github/last-commit/kauefraga/quicky-server.svg"
+      alt="GitHub top language"
+      src="https://img.shields.io/github/languages/top/kauefraga/quicky-server.svg"
     />
-  </a>
-  <img
-    alt="GitHub LICENSE"
-    src="https://img.shields.io/github/license/kauefraga/quicky-server.svg"
-  />
-</p>
-
-<h4 align="center">☂ A fast json server built with some native libraries and with some mocks. Inspired in json-server.  ☂</h4>
+    <img
+      alt="Repository size"
+      src="https://img.shields.io/github/repo-size/kauefraga/quicky-server.svg"
+    />
+    <a href="https://github.com/kauefraga/quicky-server/commits/main">
+      <img
+        alt="GitHub last commit"
+        src="https://img.shields.io/github/last-commit/kauefraga/quicky-server.svg"
+      />
+    </a>
+    <img
+      alt="GitHub LICENSE"
+      src="https://img.shields.io/github/license/kauefraga/quicky-server.svg"
+    />
+  </p>
+</div>
 
 ## ✨ Features
 
@@ -50,12 +54,11 @@ npx quicky-server -p 8080 -j https://raw.githubusercontent.com/kauefraga/quicky-
 ```bash
 git clone https://github.com/kauefraga/quicky-server.git
 cd quicky-server
+
 npm install
-npm run dev -p <port> -j <path || url>
+npm run dev -j mock/users.json # -h
 ```
-Or downloading with yarn? `yarn && yarn dev <port> <path || url>`
-<br/>
-Sincerely, i prefer pnpm, so: `pnpm i && pnpm dev <port> <path || url>`
+You are welcome to open issues and pull requests!
 
 ## 💻 Technologies
 
