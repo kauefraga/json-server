@@ -34,6 +34,10 @@
 - **Nice help**: If you need some help, just use `quicky-server -h`
 - **No config**: You can give it a .json from the web (like [this](https://raw.githubusercontent.com/kauefraga/quicky-server/main/mock/users.json))
 - **Configured CORS**: Connect it with all your applications
+- **Software Architecture**:
+  - [x] Restful
+  - [ ] GraphQL
+  - [ ] RPC
 
 ## ⬇️ How to install and use it
 
@@ -74,9 +78,10 @@ You are welcome to open issues and pull requests!
 - ⚗️ [Vitest](https://vitest.dev) - Test runner that implements Jest but with its own ESbuider (out of box typescript, esmodules...)
 - 👩‍💻 [Typescript](https://typescriptlang.org) + [TS-Node-Dev](https://npm.im/ts-node-dev) - Improve dev experience by adding type safety
 
-## 📑 To do
+## 📑 Coming soon...
 
-- [ ] Watch .json changes (here we'll need [Chokidar](https://www.npmjs.com/package/chokidar))
+- Create a server with GraphQL support
+- Watch .json changes (here we'll need [Chokidar](https://www.npmjs.com/package/chokidar))
 
 ## 📝 License
 
