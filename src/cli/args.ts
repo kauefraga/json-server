@@ -10,12 +10,14 @@ program
 interface QuickyServerOptions {
   port: string | number;
   json: string;
+  graphql: boolean;
 }
 
 export function args() {
   program
     .option('-p, --port [number]', 'port that will be into server', '3333')
-    .option('-j, --json <path>', 'path to json file');
+    .option('-j, --json <path>', 'path to json file')
+    .option('-g --graphql', 'use graphql server instead of restful', false);
 
   program.parse(process.argv, { from: 'user' });
 
