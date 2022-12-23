@@ -1,7 +1,7 @@
 {
   "name": "quicky-server",
-  "version": "2.1.0",
-  "description": "☂ A fast json server built with some native libraries and with some mocks. Inspired in json-server.",
+  "version": "2.1.1",
+  "description": "☂ A fast json server built to be flexible and easy-to-use. Inspired in json-server.",
   "author": "Kauê Fraga Rodrigues <kauefragarodrigues456@gmail.com>",
   "license": "MIT",
   "repository": "https://github.com/kauefraga/quicky-server.git",
@@ -9,14 +9,16 @@
     "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
-    "json-server",
-    "api-rest",
+    "nodejs",
     "json",
     "server",
+    "json-server",
     "backend-server",
-    "nodejs",
-    "api",
     "backend",
+    "api",
+    "api-rest",
+    "api-graphql",
+    "graphql",
     "frontend",
     "helper-tool"
   ],

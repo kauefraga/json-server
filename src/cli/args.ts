@@ -5,7 +5,7 @@ export const program = new Command();
 program
   .name('Quicky Server')
   .description('A fast json server built with some native libraries and with some mocks. Inspired in json-server.')
-  .version('2.1.0');
+  .version('2.1.1');
 
 interface QuickyServerOptions {
   port: string | number;
