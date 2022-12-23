@@ -1,7 +1,7 @@
 import {
   Request, Response, NextFunction,
 } from 'express';
-import { info } from '../../lib/colorized-console';
+import { info } from '../../../lib/colorized-console';
 
 export function logger(req: Request, res: Response, next: NextFunction) {
   res.req.statusCode = 200;

@@ -1,5 +1,5 @@
 import express from 'express';
-import { white } from '../lib/colorized-console';
+import { white } from '../../lib/colorized-console';
 import { NotFound } from './middlewares/404';
 import { cors } from './middlewares/cors';
 import { logger } from './middlewares/logger';
@@ -12,7 +12,7 @@ export interface JsonServerOptions {
   data: any;
 }
 
-export function jsonServer({
+export function RestfulJsonServer({
   port,
   routes,
   data,

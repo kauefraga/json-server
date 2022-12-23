@@ -3,7 +3,7 @@ import { basename } from 'path';
 import { blue, dim } from '../lib/colorized-console';
 import { readJson } from '../lib/parse-json';
 import { useFetch } from '../lib/use-fetch';
-import { jsonServer } from '../http/server';
+import { RestfulJsonServer } from '../http/restful/server';
 import { isUrl } from '../lib/validators';
 import { args } from './args';
 
@@ -20,7 +20,7 @@ export async function main() {
 
   dim(`\n  Loading ${json}\n  Done`);
 
-  jsonServer({
+  RestfulJsonServer({
     port,
     routes: [
       `/${basename(json, '.json')}`,

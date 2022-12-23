@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { warn } from '../../lib/colorized-console';
+import { warn } from '../../../lib/colorized-console';
 
 export function NotFound(
   request: Request,
