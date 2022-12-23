@@ -36,7 +36,7 @@
 - **Configured CORS**: Connect it with all your applications
 - **Software Architecture**:
   - [x] Restful
-  - [ ] GraphQL
+  - [x] GraphQL
   - [ ] RPC
 
 ## ⬇️ How to install and use it
@@ -49,8 +49,11 @@ quicky-server --port <port> --json <path || url>
 
 npx quicky-server -p <port> -j <path || url>
 
-# Example
+# Example (restful)
 npx quicky-server -p 8080 -j https://raw.githubusercontent.com/kauefraga/quicky-server/main/mock/users.json
+
+# Example (graphql)
+npx quicky-server --graphql -j https://raw.githubusercontent.com/kauefraga/quicky-server/main/mock/users.json
 ```
 
 ## ⬇️ How to develop and contribute
@@ -72,6 +75,8 @@ You are welcome to open issues and pull requests!
   - 🗺 [Path](https://nodejs.org/api/path.html) - A way to manipulate paths much easier (cross platform)
 - 🤖 [Commander](https://npm.im/commander) - The command line helper
 - 🔮 [Express](https://expressjs.com) - "Fast, minimalist web framework for Nodejs..."
+- 🌠 [GraphQL](https://npm.im/graphql) - A software architecture different from restful
+- 🧙‍♂️ [Apollo Server](https://npm.im/apollo-server) - A GraphQL server
 - 💄 Code styling with [Eslint](https://eslint.org)
   - https://www.npmjs.com/package/eslint-config-airbnb-base
   - https://www.npmjs.com/package/eslint-config-airbnb-typescript
