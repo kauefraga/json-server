@@ -2,7 +2,7 @@
   <h1><code>Quicky Server</code></h1>
 
   <p>
-    <strong>☂ A fast json server built with some native libraries and with some mocks. Inspired in json-server.  ☂</strong>
+    <strong>☂ A fast json server built to be flexible and easy-to-use. Inspired in json-server.  ☂</strong>
   </p>
 
   <p>
